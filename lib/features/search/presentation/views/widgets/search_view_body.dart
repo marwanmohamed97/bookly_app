@@ -1,3 +1,4 @@
+import 'package:bookly/features/search/presentation/views/widgets/search_result_list_view.dart';
 import 'package:flutter/material.dart';
 import '../../../../../core/ulits/styles.dart';
 import '../../../../home/presentation/views/widgets/book_list_view_item.dart';
@@ -27,24 +28,6 @@ class SearchViewBody extends StatelessWidget {
           Expanded(child: SearchResultListView())
         ],
       ),
-    );
-  }
-}
-
-class SearchResultListView extends StatelessWidget {
-  const SearchResultListView({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      padding: EdgeInsets.zero,
-      itemCount: 10,
-      itemBuilder: (context, index) {
-        return const Padding(
-          padding: EdgeInsets.symmetric(vertical: 10),
-          child: BookListViewItem(),
-        );
-      },
     );
   }
 }
